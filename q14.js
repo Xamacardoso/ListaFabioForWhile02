@@ -4,12 +4,19 @@ import {getnumber, write} from './utils/io_utils.js'
 maior quadrado menor que 38 é 36 (quadrado de 6). */
 
 function main(){
+    // Entrada
     const n = getnumber('Qual o valor de N? ')
     let quadrado = 1
-    while (n - quadrado*quadrado > quadrado){
+
+    // Processamento
+    while (quadrado*quadrado <= n){
+        // Convergência de dados
         quadrado ++
     }
+    
+    quadrado -= 1
 
+    // Saída
     write(`Maior quadrado menor ou igual a ${n}: ${quadrado*quadrado} (quadrado de ${quadrado})`)
 }
 
